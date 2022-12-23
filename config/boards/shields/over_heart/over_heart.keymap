@@ -33,14 +33,6 @@
 		>;
 		};
 
-			bt {
-		bindings = <
-		&trans  &trans &trans &trans &trans &trans &trans &trans &trans &trans
-		&bootloader  &trans &trans &trans &trans &trans &trans &trans &trans &trans
-		&bt BT_PRV  &bt BT_NXT &bt BT_CLR &trans &to 0   				&to 1 &trans  &trans  &trans &trans
-					 &to 0 &trans  					&trans &to 1
-		>;
-		};
 
 	};
 
