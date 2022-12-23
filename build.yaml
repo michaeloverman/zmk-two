@@ -12,5 +12,9 @@
 #     shield: reviung41
 #
 ---
+board: [ "nice_nano_v2" ]
+shield: [ "over_heart_left", "over_heart_right" ]
 include:
-  - shield: over_heart
+  - board: nice_nano_v2
+  - shield: over_heart_left
+  - shield: over_heart_right
