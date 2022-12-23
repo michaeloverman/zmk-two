@@ -1,5 +1,5 @@
 config SHIELD_OVER_HEART_LEFT
-    def_bool $(shields_list_contains,my_board_left)
+    def_bool $(shields_list_contains,over_heart_left)
 
 config SHIELD_OVER_HEART_RIGHT
-    def_bool $(shields_list_contains,my_board_right)
+    def_bool $(shields_list_contains,over_heart_right)
