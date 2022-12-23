@@ -17,7 +17,7 @@
 		&kp QUOT	&kp COMMA	&kp DOT		&kp P		&kp Y			&kp F		&kp G		&kp C		&kp R		&kp L
 		&kp A		&hm LCTL O	&hm LALT E	&hm LGUI U	&kp I			&kp D		&hm RGUI H	&hm RALT T	&hm RCTL N	&kp S
 		&hs LSHIFT SEMI	&kp Q	&kp J		&kp K		&mt LC(LS(LALT)) X	&kp B	&kp H		&kp W		&td V		&hs RSHIFT Z
-          									&to ! 		&to 2			&kp RET		&kp LC(LS(LALT)) SPC
+          									&to 1 		&to 2			&kp RET		&kp LC(LS(LALT)) SPC
 		>;
 		};
 
