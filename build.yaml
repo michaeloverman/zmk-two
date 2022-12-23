@@ -13,6 +13,4 @@
 #
 ---
 include:
-  - board: over_heart
-  - board: nice_nano_v2
-    shield: over_heart
+  - shield: over_heart
