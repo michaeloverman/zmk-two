@@ -39,15 +39,6 @@
 	keymap {
 			compatible = "zmk,keymap";
 
-		base_layer {
-			bindings = <
-				&kp SQT &kp QUES	&kp EXCL	&kp P	&kp Y		&kp F	&kp G		&kp C		&kp R		&kp L
-				&kp A	&kp O		&kp E		&kp U	&kp I		&kp D	&kp H		&kp T		&kp N		&kp S
-				&mt LSHIFT SEMI	&kp Q	&kp J		&kp K		&kp X		&kp B		&kp H		&kp W		&kp V		&mt RSHIFT Z
-													&lt NUM ESC	&to NAV		&mt LGUI RET	&kp SPC
-			>;
-		};
-
 		nav_layer {
 			bindings = <
 				&trans  &kp ATSN   &kp LS(N3) &kp DLLR    &trans		&trans &kp LS(COMMA) &kp LS(DOT) &kp CARET &trans
@@ -55,6 +46,15 @@
 				&kp TILDE    &kp GRAVE 	&kp LA(LBKT) &kp LA(LS(LBKT))  &to 0 	&to 2 &kp LPRN &kp RPRN &kp RBKT  &kp RSHIFT
 								&to BASE &to NUM  					&trans &kp N0
 				>;
+		};
+
+		base_layer {
+			bindings = <
+				&kp SQT &kp QUES	&kp EXCL	&kp P	&kp Y		&kp F	&kp G		&kp C		&kp R		&kp L
+				&kp A	&kp O		&kp E		&kp U	&kp I		&kp D	&kp H		&kp T		&kp N		&kp S
+				&mt LSHIFT SEMI	&kp Q	&kp J		&kp K		&kp X		&kp B		&kp H		&kp W		&kp V		&mt RSHIFT Z
+													&lt NUM ESC	&to NAV		&mt LGUI RET	&kp SPC
+			>;
 		};
 
 		num_layer {
