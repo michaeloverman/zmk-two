@@ -37,15 +37,15 @@
 
 
 	keymap {
-			compatible = "zmk,keymap";
+		compatible = "zmk,keymap";
 
 		base_layer {
-			bindings = <
-				&td DQT SQT &td COMMA QUES &td DOT EXCL &kp P &kp Y &kp F &kp G &kp C &kp R &kp L
-				&kp A &kp O &kp E &kp U &kp I &kp D &kp H &kp T &kp N &kp S
-				&mt LSHIFT SEMI &kp Q &kp J &kp K &kp X &kp B &kp M &kp W &kp V &mt RSHIFT Z
-				&lt NUM ESC &to NAV &mt LGUI RET &kp SPC
-			>;
+		bindings = <
+			&td DQT SQT &td COMMA QUES &td DOT EXCL &kp P &kp Y &kp F &kp G &kp C &kp R &kp L
+			&kp A &kp O &kp E &kp U &kp I &kp D &kp H &kp T &kp N &kp S
+			&mt LSHIFT SEMI &kp Q &kp J &kp K &kp X &kp B &kp M &kp W &kp V &mt RSHIFT Z
+			&lt NUM ESC &to NAV &mt LGUI RET &kp SPC
+		>;
 		};
 
 		nav_layer {
