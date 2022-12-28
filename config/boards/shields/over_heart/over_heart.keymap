@@ -73,11 +73,11 @@
 		
 		nav_layer {
 			bindings = <
-				&trans  &kp ATSN   &kp LS(N3) &kp DLLR    &trans		&trans &kp LS(COMMA) &kp LS(DOT) &kp CARET &trans
-				&kp TAB    &kp EQUAL    &kp LA(RBKT)      &kp LA(LS(RBKT))     &trans 		&trans &kp LBRC  &kp RBRC &kp PIPE  &kp AMPS
-				&kp TILDE    &kp GRAVE 	&kp LA(LBKT) &kp LA(LS(LBKT))  &to 0 	&to 2 &kp LPRN &kp RPRN &kp RBKT  &kp RSHIFT
-								&to NUM &to SYS  					&to DEF &to DEF
-				>;
+				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
+				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
+				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
+										&trans	&trans		&trans	&trans
+			>;
 		};
 
 		num_layer {
