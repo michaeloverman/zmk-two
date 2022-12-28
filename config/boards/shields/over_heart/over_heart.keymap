@@ -39,6 +39,15 @@
 	keymap {
 		compatible = "zmk,keymap";
 
+		default_layer {
+			bindings = <
+				&kp A	&kp A	&kp A	&kp A	&kp A		&kp A	&kp A	&kp A	&kp A	&kp A
+				&kp A	&kp A	&kp A	&kp A	&kp A		&kp A	&kp A	&kp A	&kp A	&kp A
+				&kp A	&kp A	&kp A	&kp A	&kp A		&kp A	&kp A	&kp A	&kp A	&kp A
+										&kp A	&kp A		&kp A	&kp A
+			>;
+		};
+		
 		nav_layer {
 			bindings = <
 				&trans  &kp ATSN   &kp LS(N3) &kp DLLR    &trans		&trans &kp LS(COMMA) &kp LS(DOT) &kp CARET &trans
@@ -57,7 +66,6 @@
 				>;
 		};
 
-	};
 
 
 		sys_layer {
@@ -69,4 +77,5 @@
 			>;
 		};
 
+	};
 };
