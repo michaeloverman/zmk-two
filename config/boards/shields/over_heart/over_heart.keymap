@@ -1,16 +1,16 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+&mt {
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+};
+
 #define BASE 0
 #define NAV 1
 #define NUM 2
 #define SYS 3
 #define BT 4
-
-&mt {
-    tapping-term-ms = <200>;
-    flavor = "tap-preferred";
-};
 
 / {
     behaviors {
