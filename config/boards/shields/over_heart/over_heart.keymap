@@ -54,10 +54,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-				= <&macro_press &kp LSHFT>
-				, <&macro_tap &kp M>
-				, <&macro_release &kp LSHFT>
-				, <&macro_tap &kp I &kp C &kp H &kp A &kp E &kp L>
+				= <&macro_tap &kp LS(M) &kp I &kp C &kp H &kp A &kp E &kp L>
 				;
 		};
 	};
@@ -95,7 +92,7 @@
 
 		fun_layer {
 			bindings = <
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
+				&trans	&michael	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
 				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
 				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
 										&trans	&trans		&trans	&trans
