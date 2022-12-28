@@ -42,9 +42,9 @@
 		default_layer {
 			bindings = <
 				&td DQT SQT	&td COMMA QMARK	&td DOT EXCL	&kp P	&kp Y		&kp F	&kp G	&kp C	&kp R	&kp L
-				&kp A	&kp O	&kp E	&kp U	&kp I		&kp D	&kp H	&kp T	&kp N	&kp S
-				&mt LSHIFT SEMI	&kp Q	&kp J	&kp K	&kp X		&kp B	&kp M	&kp W	&kp V	&mt RSHIFT Z
-										&lt NUM ESC	&to NAV		&mt LGUI RET	&kp SPC
+				&kp A	&kp O	&kp E	&hm LGUI U	&kp I		&kp D	&kp H	&kp T	&kp N	&kp S
+				&kp SEMI	&kp Q	&kp J	&kp K	&kp X		&kp B	&kp M	&kp W	&kp V	&kp Z
+										&mt LSHIFT ESC	&to NAV		&mt LGUI RET	&kp SPC
 			>;
 		};
 		
@@ -53,7 +53,7 @@
 				&trans  &kp ATSN   &kp LS(N3) &kp DLLR    &trans		&trans &kp LS(COMMA) &kp LS(DOT) &kp CARET &trans
 				&kp TAB    &kp EQUAL    &kp LA(RBKT)      &kp LA(LS(RBKT))     &trans 		&trans &kp LBRC  &kp RBRC &kp PIPE  &kp AMPS
 				&kp TILDE    &kp GRAVE 	&kp LA(LBKT) &kp LA(LS(LBKT))  &to 0 	&to 2 &kp LPRN &kp RPRN &kp RBKT  &kp RSHIFT
-								&to DEF &to NUM  					&trans &kp N0
+								&to DEF &to NUM  					&to DEF &kp N0
 				>;
 		};
 
