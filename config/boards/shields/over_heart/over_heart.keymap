@@ -44,7 +44,7 @@
 			label = "LAYER_MOD_TAG";
 			#binding-cells = <1>;
 			tapping-term-ms = <200>;
-			bindings = <&kp LSHFT>, <&to>;
+			bindings = <&kp LSHIFT>, <&to>;
 		};
 		td_sh_lk: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
