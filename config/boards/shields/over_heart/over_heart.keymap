@@ -72,14 +72,14 @@
 			>;
 		};
 		
-		nav_layer {
-			bindings = <
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-										&trans	&trans		&trans	&trans
-			>;
-		};
+		//nav_layer {
+			//bindings = <
+				//&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
+				//&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
+				//&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
+										//&trans	&trans		&trans	&trans
+			//>;
+		//};
 
 		num_layer {
 			bindings = <
