@@ -41,10 +41,11 @@
 		};
 		shift_lay: shift_layer {
 			compatible = "zmk,behavior-hold-tap";
-			label = "LAYER_MOD_TAG";
+			label = "SHIFT_MOD_TAG";
 			#binding-cells = <2>;
 			tapping-term-ms = <135>;
 			flavor = "hold-preferred";
+			retro-tap;
 			bindings = <&kp>, <&to>;
 		};
 		td_sh_lk: tap_dance_shift_lock {
