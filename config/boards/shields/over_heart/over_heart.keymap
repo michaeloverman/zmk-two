@@ -45,18 +45,31 @@
 			#binding-cells = <0>;
 			tapping-term-ms = <135>;
 			flavor = "hold-preferred";
-			bindings = <&kp LSHIFT>, <&to NAV>;
+			bindings = <&kp LSHIFT>, <&to SYS>;
 		};
 		td_sh_lk: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_SHIFT_LOCK";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&sk LSHIFT>, <&kp LSHIFT &kp LSHIFT>, <&kt LSHIFT>;
+			bindings = <&sk LSHIFT>, <&kp LSHIFT &kp LSHIFT>, <&caps_word>;
 		};
+		dbt: dt_bluetooth {
+			compatible = "zmk,behavior-tap-dance";
+			label = "DOUBLETAP_BLUETOOTH";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&none>, <&none>, <&bt>;
+		}
     };
 
 	macros {
+		q_def: kp_q_default {
+			label = "Q default";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp Q>, <&macro_tap &to DEF>;
+		}
 		michael: michael {
 			label = "Michael";
 			compatible = "zmk,behavior-macro";
@@ -93,44 +106,44 @@
 			bindings = <
 				&td DQT SQT	&td COMMA QMARK	&td DOT EXCL	&kp P	&kp Y		&kp F	&kp G	&kp C	&kp R	&kp L
 				&kp A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&kp S
-				&td SEMI COLON	&kp Q	&kp J	&kp K	&kp X		&kp B	&kp M	&kp W	&kp V	&kp Z
+				&kp SEMI &kp TAB	&kp J	&kp K	&kp X		&kp B	&kp M	&kp W	&kp V	&kp Z
 										&lay_mt NUM NAV	&td_sh_lk		&mt LGUI RET	&lt FUN SPACE
 			>;
 		};
 		
 		nav_layer {
 			bindings = <
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-										&trans	&trans		&trans	&trans
+				&trans	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
+				&trans	&trans	&trans	&trans	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
+				&trans	&trans	&trans	&trans	&trans		&trans	&kp LO(LEFT)	&none	&kp LO(RIGHT)	&trans
+										&to NUM	&kp_sh_lk	&to DEF	&lt FUN SPACE
 			>;
 		};
 
 		num_layer {
 			bindings = <
-				&td TILDE GRAVE	&kp PIPE	&kp TAB		&kp HASH	&td LBRC RBRC	&kp STAR	&kp N7		&kp N8		&kp N9		&td FSLH BSLH
+				&td TILDE GRAVE	&kp Q		&kp PIPE	&kp HASH	&td LBRC RBRC	&kp STAR	&kp N7		&kp N8		&kp N9		&td FSLH BSLH
 				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&td LPAR RPAR	&kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
 				&kp ESC			&kp PRCNT	&kp DEL		&kp BSPC	&td LBKT RBKT	&kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
-														&to NAV 	&sh_sys &mt LGUI RET &kp N0
+														&to NAV 	&sh_sys 		&to DEF	&kp N0
 				>;
 		};
 
 		fun_layer {
 			bindings = <
-				&trans	&michael	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-				&trans	&overman	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-				&trans	&m_overman	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-										&trans	&trans		&trans	&trans
+				&michael	&overman	&m_overman	&trans	&trans		&trans	&kp F7	&kp F8	&kp F9	&trans
+				&trans	&trans	&trans	&trans	&trans		&trans	&kp F4	&kp F5	&kp F6	&trans
+				&trans	&kp Q	&trans	&trans	&trans		&trans	&kp F1	&kp F2	&kp F3	&trans
+										&trans	&trans		&to DEF	&trans
 			>;
 		};
 
 		sys_layer {
 			bindings = <
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-										&trans	&trans		&trans	&trans
+				&reset			&none			&dbt BT_PRV		&dbt BT_NXT		&dbt BT_CLR		&none	&none	&none	&none	&reset
+				&dbt BT_SEL 0	&dbt BT_SEL 1	&dbt BT_SEL 2	&dbt BT_SEL 3	&dbt BT_SEL 4		&none	&none	&none	&none	&none
+				&bootloader		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
+																&none			&none				&to DEF	&none
 			>;
 		};
 
