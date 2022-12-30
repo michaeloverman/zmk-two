@@ -115,7 +115,7 @@
 			bindings = <
 				&trans	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
 				&trans	&trans	&trans	&trans	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
-				&trans	&trans	&trans	&trans	&trans		&trans	&kp LO(LEFT)	&none	&kp LO(RIGHT)	&trans
+				&trans	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
 										&to NUM	&kp_sh_lk	&to DEF	&lt FUN SPACE
 			>;
 		};
