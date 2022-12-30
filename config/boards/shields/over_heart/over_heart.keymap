@@ -43,15 +43,16 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "LAYER_MOD_TAG";
 			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			bindings = <&kp>, <&to>;
+			tapping-term-ms = <135>;
+			flavor = "hold-preferred";
+			bindings = <&mo>, <&to>;
 		};
 		td_sh_lk: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_SHIFT_LOCK";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&sk LSHIFT>, <&kt LSHIFT>;
+			bindings = <&sk LSHIFT>, <&kp LSHIFT &kp LSHIFT>, <&kt LSHIFT>;
 		};
     };
 
@@ -62,6 +63,24 @@
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap &kp LS(M) &kp I &kp C &kp H &kp A &kp E &kp L>
+				;
+		};
+		overman: overman {
+			label = "Overman";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp LS(O) &kp V &kp E &kp R &kp M &kp A &kp N>
+				;
+		};
+		m_overman: m_overman {
+			label = "Michael Overman";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp LS(M) &kp I &kp C &kp H &kp A &kp E &kp L>
+				, <&macro_tap &kp SPACE>
+				, <&macro_tap &kp LS(O) &kp V &kp E &kp R &kp M &kp A &kp N>
 				;
 		};
 	};
@@ -100,8 +119,8 @@
 		fun_layer {
 			bindings = <
 				&trans	&michael	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
-				&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
+				&trans	&overman	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
+				&trans	&m_overman	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans
 										&trans	&trans		&trans	&trans
 			>;
 		};
