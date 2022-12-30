@@ -106,7 +106,7 @@
 			bindings = <
 				&td DQT SQT	&td COMMA QMARK	&td DOT EXCL	&kp P	&kp Y		&kp F	&kp G	&kp C	&kp R	&kp L
 				&kp A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&kp S
-				&kp SEMI &kp TAB	&kp J	&kp K	&kp X		&kp B	&kp M	&kp W	&kp V	&kp Z
+				&kp SEMI &kp TAB	&kp J	&kp K	&kp X		&kp B	&kp M	&kp W	&kp V	&kp BSPC
 										&lay_mt NUM NAV	&td_sh_lk		&mt LGUI RET	&lt FUN SPACE
 			>;
 		};
@@ -133,7 +133,7 @@
 			bindings = <
 				&michael	&overman	&m_overman	&trans	&trans		&trans	&kp F7	&kp F8	&kp F9	&trans
 				&trans	&trans	&trans	&trans	&trans		&trans	&kp F4	&kp F5	&kp F6	&trans
-				&trans	&kp Q	&trans	&trans	&trans		&trans	&kp F1	&kp F2	&kp F3	&trans
+				&trans	&kp Q	&trans	&trans	&trans		&trans	&kp F1	&kp F2	&kp F3	&kp Z
 										&trans	&trans		&to DEF	&trans
 			>;
 		};
