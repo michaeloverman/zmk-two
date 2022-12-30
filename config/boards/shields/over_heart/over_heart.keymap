@@ -34,18 +34,17 @@
         };
 		lay_mt: layer_mod_tap {
 			compatible = "zmk,behavior-hold-tap";
-			label = "LAYER_MOD_TAG";
+			label = "LAYER_MOD_TAP";
 			#binding-cells = <2>;
 			tapping-term-ms = <200>;
 			bindings = <&mo>, <&to>;
 		};
-		shift_lay: shift_layer {
+		sh_lay: shift_layer {
 			compatible = "zmk,behavior-hold-tap";
-			label = "SHIFT_MOD_TAG";
+			label = "SHIFT_LAYER";
 			#binding-cells = <2>;
 			tapping-term-ms = <135>;
 			flavor = "hold-preferred";
-			retro-tap;
 			bindings = <&kp>, <&to>;
 		};
 		td_sh_lk: tap_dance_shift_lock {
@@ -113,7 +112,7 @@
 				&td TILDE GRAVE	&kp PIPE	&kp TAB		&kp HASH	&td LBRC RBRC	&kp STAR	&kp N7		&kp N8		&kp N9		&td FSLH BSLH
 				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&td LPAR RPAR	&kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
 				&kp ESC			&kp PRCNT	&kp DEL		&kp BSPC	&td LBKT RBKT	&kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
-														&to NAV 	&shift_lay LSHIFT SYS		&mt LGUI RET &kp N0
+														&to NAV 	&sh_lay LSHIFT SYS		&mt LGUI RET &kp N0
 				>;
 		};
 
