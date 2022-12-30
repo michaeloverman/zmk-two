@@ -60,7 +60,7 @@
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
 			bindings = <&none>, <&none>, <&bt>;
-		}
+		};
     };
 
 	macros {
@@ -69,7 +69,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings = <&kp Q>, <&macro_tap &to DEF>;
-		}
+		};
 		michael: michael {
 			label = "Michael";
 			compatible = "zmk,behavior-macro";
