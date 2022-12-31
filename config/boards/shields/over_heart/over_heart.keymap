@@ -153,15 +153,15 @@
 			>;
 		};
 
-		sys_layer {
-			bindings = <
-				&reset			&none			&dbt BT_PRV		&dbt BT_NXT		&dbt BT_CLR		&none	&none	&none	&none	&reset
+		//sys_layer {
+			//bindings = <
+				//&reset			&none			&dbt BT_PRV		&dbt BT_NXT		&dbt BT_CLR		&none	&none	&none	&none	&reset
 				//&dbt BT_SEL 0	&dbt BT_SEL 1	&dbt BT_SEL 2	&dbt BT_SEL 3	&dbt BT_SEL 4		&none	&none	&none	&none	&none
-				&dbt		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
-				&bootloader		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
-																&none			&none				&to DEF	&none
-			>;
-		};
+				//&dbt		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
+				//&bootloader		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
+																//&none			&none				&to DEF	&none
+			//>;
+		//};
 
 	};
 };
