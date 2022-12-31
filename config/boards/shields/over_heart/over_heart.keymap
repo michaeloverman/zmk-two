@@ -74,7 +74,7 @@
 			label = "BLUETOOTH_DOUBLETAP";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&none>, <&kp>;
+			bindings = <&none>, <&bt BT_SEL 0>;
 		};
 	};
 
