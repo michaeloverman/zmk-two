@@ -59,7 +59,7 @@
 			label = "DOUBLETAP_BLUETOOTH";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&none>, <&none>, <&bt>;
+			bindings = <&none>, <&bt>;
 		};
 	};
 
