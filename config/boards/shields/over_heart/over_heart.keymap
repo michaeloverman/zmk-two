@@ -65,7 +65,7 @@
 		antd: another_new_tap_dance {
 			compatible = "zmk,behavior-tap-dance";
 			label = "ANOTHER_NEW_TAP_DANCE";
-			#binding-cells = <0>;
+			#binding-cells = <3>;
 			tapping-term-ms = <200>;
 			bindings = <&kp>, <&kp>, <&bt>;
 		};
