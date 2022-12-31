@@ -57,7 +57,7 @@
 		dbt: dt_bluetooth {
 			compatible = "zmk,behavior-tap-dance";
 			label = "DOUBLETAP_BLUETOOTH";
-			#binding-cells = <0>;
+			#binding-cells = <1>;
 			tapping-term-ms = <200>;
 			bindings = <&none>, <&none>, <&bt>;
 		};
