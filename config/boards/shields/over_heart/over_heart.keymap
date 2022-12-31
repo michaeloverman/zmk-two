@@ -67,7 +67,7 @@
 			label = "ANOTHER_NEW_TAP_DANCE";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&none>, <&none>, <&bt>;
+			bindings = <&kp>, <&kp>, <&bt>;
 		};
 		//dbt: dt_bluetooth {
 			////compatible = "zmk,behavior-tap-dance";
@@ -130,7 +130,7 @@
 			bindings = <
 				&trans	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
 				&trans	&trans	&trans	&trans	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
-				&antd BT_SEL 0	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
+				&antd A B BT_SEL 0	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
 										&to NUM	&td_sh_lk	&to DEF	&lt FUN SPACE
 			>;
 		};
