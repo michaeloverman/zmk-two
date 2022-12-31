@@ -55,6 +55,13 @@
 			tapping-term-ms = <200>;
 			bindings = <&sk LSHIFT>, <&kp LSHIFT &kp LSHIFT>, <&caps_word>;
 		};
+		new_td: new_tap_dance {
+			compatible = "zmk,behavior-tap-dance";
+			label = "NEW_TAP_DANCE";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&none>, <&kp Q>;
+		};
 		dbt: dt_bluetooth {
 			compatible = "zmk,behavior-tap-dance";
 			label = "DOUBLETAP_BLUETOOTH";
