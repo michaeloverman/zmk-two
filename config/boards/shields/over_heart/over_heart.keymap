@@ -64,10 +64,10 @@
 		};
 		dbt: dt_bluetooth {
 			compatible = "zmk,behavior-tap-dance";
-			label = "DOUBLETAP_BLUETOOTH";
+			label = "BLUETOOTH_DOUBLETAP";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&kp N1>, <&kp N2>;
+			bindings = <&none>, <&kp>;
 		};
 	};
 
