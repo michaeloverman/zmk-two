@@ -62,6 +62,13 @@
 			tapping-term-ms = <200>;
 			bindings = <&none>, <&kp>;
 		};
+		antd: another_new_tap_dance {
+			compatible = "zmk,behavior-tap-dance";
+			label = "ANOTHER_NEW_TAP_DANCE";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&none>, <&none>, <&bt BT_NXT>;
+		};
 		dbt: dt_bluetooth {
 			compatible = "zmk,behavior-tap-dance";
 			label = "BLUETOOTH_DOUBLETAP";
@@ -123,7 +130,7 @@
 			bindings = <
 				&trans	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
 				&trans	&trans	&trans	&trans	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
-				&trans	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
+				&antd	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
 										&to NUM	&td_sh_lk	&to DEF	&lt FUN SPACE
 			>;
 		};
