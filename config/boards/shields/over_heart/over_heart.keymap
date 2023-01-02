@@ -83,7 +83,7 @@
 				;
 		};
 		cvs_empnum: cvs_employee_number {
-			label = "c178540":
+			label = "c178540";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
