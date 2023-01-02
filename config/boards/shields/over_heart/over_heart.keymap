@@ -141,10 +141,10 @@
 
 		default_layer {
 			bindings = <
-				&kp DQT &com_qu	&dot_ex	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
+				&mtd DQT SQT &com_qu	&dot_ex	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
 				&kp A	&hm LCTRL O	&hm LALT E	&kp U	&kp I		&kp D	&kp H	&hm RALT T	&hm RCTRL N	&kp S
 				&kp SEMI &kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp BSPC
-										&mo NUM &lt NAV sh_td	&mt LGUI RET	&lt FUN SPACE
+										&mo NUM &lt NAV N6	&mt LGUI RET	&lt FUN SPACE
 			>;
 		};
 		
