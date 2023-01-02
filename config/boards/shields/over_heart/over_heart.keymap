@@ -96,7 +96,7 @@
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap &kp M &kp I &kp C &kp H &kp A &kp E &kp L &kp DOT &kp O &kp V &kp E &kp R &kp M &kp A &kp N>
-				, <&kp ATSIGN &kp C &kp V &kp S &kp H &kp E &kp A &kp L &kp T &kp H &kp DOT &kp C &kp O &kp M>
+				, <&kp AT &kp C &kp V &kp S &kp H &kp E &kp A &kp L &kp T &kp H &kp DOT &kp C &kp O &kp M>
 				;
 		};
 		per_email: personal_email {
@@ -105,7 +105,7 @@
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap &kp O &kp V &kp E &kp R &kp M &kp A &kp N &kp DOT &kp M &kp I &kp C &kp H &kp A &kp E &kp L>
-				, <&kp ATSIGN &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>
+				, <&kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>
 				;
 		};
 	};
