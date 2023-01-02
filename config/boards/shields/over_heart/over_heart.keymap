@@ -24,14 +24,14 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
-		td: tapdance {
+		dot_ex: dot_exclamation {
 			compatible = "zmk,behavior-tap-dance";
-			label = "TAPDANCE";
-			#binding-cells = <2>;
+			label = "DOT_EXCLAMATION";
+			#binding-cells = <0>;
 			tapping-term-ms = <150>;
 			quick_tap_ms = <0>;
 			//flavor = "tap-preferred";
-			bindings = <&kp>, <&kp>;
+			bindings = <&kp DOT>, <&kp EXCL>;
 		};
 		lay_mt: layer_mod_tap {
 			compatible = "zmk,behavior-hold-tap";
@@ -116,7 +116,7 @@
 
 		default_layer {
 			bindings = <
-				&td DQT SQT	&td COMMA QMARK	&td DOT EXCL	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
+				&td DQT SQT	&td COMMA QMARK	&dot_ex	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
 				&kp A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&kp S
 				&kp SEMI &kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp BSPC
 										&lay_mt NUM NAV	&td_sh_lk		&mt LGUI RET	&lt FUN SPACE
