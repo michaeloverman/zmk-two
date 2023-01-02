@@ -33,6 +33,15 @@
 			//flavor = "tap-preferred";
 			bindings = <&kp COMMA>, <&kp QMARK>;
 		};
+		mtd: my_tap_dance {
+			compatible = "zmk,behavior-tap-dance";
+			label = "MY_TAP_DANCE";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			//quick_tap_ms = <0>;
+			//flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
 		dot_ex: dot_exclamation {
 			compatible = "zmk,behavior-tap-dance";
 			label = "DOT_EXCLAMATION";
@@ -135,7 +144,7 @@
 				&kp DQT &com_qu	&dot_ex	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
 				&kp A	&hm LCTRL O	&hm LALT E	&kp U	&kp I		&kp D	&kp H	&hm RALT T	&hm RCTRL N	&kp S
 				&kp SEMI &kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp BSPC
-										&mo NUM NAV	&lt NAV sh_td	&mt LGUI RET	&lt FUN SPACE
+										&mo NUM &lt NAV sh_td	&mt LGUI RET	&lt FUN SPACE
 			>;
 		};
 		
@@ -150,9 +159,9 @@
 
 		num_layer {
 			bindings = <
-				&kp TILDE &kp Q		&kp PIPE	&kp HASH	&kp LBRC &kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
-				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&kp LPAR &kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
-				&kp ESC			&kp PRCNT	&kp DEL		&kp BSPC	&kp LBKT &kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
+				&kp TILDE GRAVE &kp Q		&kp PIPE	&kp HASH	&kp LBRC RBRC &kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
+				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&kp LPAR RPAR &kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
+				&kp ESC			&kp PRCNT	&kp DEL		&kp BSPC	&kp LBKT RBKT &kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
 														&to NAV 	&kp LSHIFT &to DEF	&kp N0
 				>;
 		};
