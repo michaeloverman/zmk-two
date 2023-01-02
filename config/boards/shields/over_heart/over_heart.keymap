@@ -82,6 +82,32 @@
 				, <&macro_tap &kp LS(O) &kp V &kp E &kp R &kp M &kp A &kp N>
 				;
 		};
+		cvs_empnum: cvs_employee_number {
+			label = "c178540":
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp C &kp N1 &kp N8 &kp N9 &kp N6 &kp N5 &kp N8>
+				;
+		};
+		cvs_email: cvs_email {
+			label = "michael.overman@cvshealth.com":
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp M &kp I &kp C &kp H &kp A &kp E &kp L &kp DOT &kp O &kp V &kp E &kp R &kp M &kp A &kp N>
+				, <&kp ATSIGN &kp C &kp V &kp S &kp H &kp E &kp A &kp L &kp T &kp H &kp DOT &kp C &kp O &kp M>
+				;
+		};
+		per_email: personal_email {
+			label = "overman.michael@gmail.com":
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp O &kp V &kp E &kp R &kp M &kp A &kp N &kp DOT &kp M &kp I &kp C &kp H &kp A &kp E &kp L>
+				, <&kp ATSIGN &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>
+				;
+		};
 	};
 
 
@@ -117,22 +143,21 @@
 
 		fun_layer {
 			bindings = <
-				&michael	&overman	&m_overman	&trans	&trans		&trans	&kp F7	&kp F8	&kp F9	&kp LS(LA(C_VOL_UP))
-				&trans	&trans	&trans	&trans	&trans		&trans	&kp F4	&kp F5	&kp F6	&kp LS(LA(C_VOL_DN))
-				&trans	&kp Q	&trans	&trans	&trans		&trans	&kp F1	&kp F2	&kp F3	&kp Z
-										&trans	&trans		&to DEF	&trans
+				&michael	&trans	&trans	&cvs_empnum	&trans		&trans	&kp F7	&kp F8	&kp F9	&kp LS(LA(C_VOL_UP))
+				&overman	&trans	&trans	&cvs_email	&trans		&trans	&kp F4	&kp F5	&kp F6	&kp LS(LA(C_VOL_DN))
+				&m_overman	&kp Q	&trans	&per_email	&trans		&trans	&kp F1	&kp F2	&kp F3	&kp Z
+										&trans	&kp LSHIFT		&to DEF	&trans
 			>;
 		};
 
-		//sys_layer {
-			//bindings = <
-				//&reset			&none			&dbt BT_PRV		&dbt BT_NXT		&dbt BT_CLR		&none	&none	&none	&none	&reset
-				//&dbt BT_SEL 0	&dbt BT_SEL 1	&dbt BT_SEL 2	&dbt BT_SEL 3	&dbt BT_SEL 4		&none	&none	&none	&none	&none
-				//&dbt		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
-				//&bootloader		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
-																//&none			&none				&to DEF	&none
-			//>;
-		//};
+		sys_layer {
+			bindings = <
+				&reset			&none			&bt BT_PRV		&bt BT_NXT		&bt BT_CLR		&none	&none	&none	&none	&reset
+				&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4		&none	&none	&none	&none	&none
+				&bootloader		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
+																&none			&none				&to DEF	&none
+			>;
+		};
 
 	};
 };
