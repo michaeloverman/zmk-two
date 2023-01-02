@@ -58,12 +58,12 @@
 			tapping-term-ms = <200>;
 			bindings = <&mo>, <&to>;
 		};
-		lay_sh: layer_shift_td {
+		nav_sh: layer_shift_td {
 			compatible = "zmk,behavior-hold-tap";
 			label = "LAYER_SHIFT_TAP";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&mo NAV>, <&td_sh_lk>;
+			bindings = <&mo NAV>, <&sh_td>;
 		};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
@@ -153,7 +153,7 @@
 				&trans	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
 				&trans	&trans	&trans	&trans	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
 				&trans	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
-										&to NUM	&td_sh_lk	&to DEF	&lt FUN SPACE
+										&to NUM	&nav_sh	&to DEF	&lt FUN SPACE
 			>;
 		};
 
