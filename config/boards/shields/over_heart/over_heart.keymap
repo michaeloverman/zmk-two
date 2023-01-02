@@ -91,7 +91,7 @@
 				;
 		};
 		cvs_email: cvs_email {
-			label = "michael.overman@cvshealth.com":
+			label = "michael.overman@cvshealth.com";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
@@ -100,7 +100,7 @@
 				;
 		};
 		per_email: personal_email {
-			label = "overman.michael@gmail.com":
+			label = "overman.michael@gmail.com";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
