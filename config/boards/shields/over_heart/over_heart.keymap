@@ -94,6 +94,7 @@
 			label = "SEMICOLON_COLON";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
+			bindings = <&kp SEMI>, <&kp COLON>;
 		};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
@@ -111,6 +112,15 @@
 			//#binding-cells = <0>;
 			//bindings = <&kp Q>, <&macro_tap &to DEF>;
 		//};
+		go_to_sys: go_to_system_layer {
+			label = "go_to_system_layer";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp S &kp Y &kp S>
+				, <&kp BSPC &kp BSPC &kp BSPC>
+				, <&to SYS>
+				;
+		};
 		dotdotdot: three_dots {
 			label = "three_dots";
 			compatible = "zmk,behavior-macro";
@@ -185,23 +195,23 @@
 			bindings = <
 				&dqt_sqt	&comma_q 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
 				&kp A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&kp S
-				&kp SEMI &kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp BSPC
+				&sm_cl	&kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp BSPC
 										&mo NUM &sh_td	&mt LGUI RET	&lt FUN SPACE
 			>;
 		};
 		
 		nav_layer {
 			bindings = <
-				&trans	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
+				&reset	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&reset
 				&trans	&trans	&trans	&trans	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
-				&trans	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
-										&to NUM	&lsk NAV LSHIFT	&to DEF	&lt FUN SPACE
+				&bootloader	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&bootloader
+										&to NUM	&lsk NAV LSHIFT	&to DEF	&go_to_sys
 			>;
 		};
 
 		num_layer {
 			bindings = <
-				&til_gr	&kp Q		&kp PIPE	&kp HASH	&lr_brc	&kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
+				&til_gr	&kp LG(PIPE)	&kp PIPE	&kp HASH	&lr_brc	&kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
 				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&lr_par	&kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
 				&kp ESC			&kp PRCNT	&kp DEL		&kp BSPC	&lr_bkt	&kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
 														&to NAV 	&kp LSHIFT &to DEF	&kp N0
