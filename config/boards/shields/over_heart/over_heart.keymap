@@ -13,7 +13,7 @@
 #define FUN 3
 #define BT 4
 
-#define DTAP(key) &kp key  // Macro to strike a key twice
+#define DTAP(key) &kp key &kp key // Macro to strike a key twice
 
 / {
 	behaviors {
@@ -103,7 +103,7 @@
 			label = "TAP_DANCE_SHIFT_LOCK";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&lsk NAV LSHIFT>, <&mt LSHIFT DTAP(LSHIFT)>, <&caps_word>;
+			bindings = <&lsk NAV LSHIFT>, DTAP(LSHIFT), <&caps_word>;
 		};
 	};
 
