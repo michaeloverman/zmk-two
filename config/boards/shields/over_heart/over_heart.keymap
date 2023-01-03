@@ -27,7 +27,7 @@
 		mtd: my_tap_dance {
 			compatible = "zmk,behavior-tap-dance";
 			label = "MY_TAP_DANCE";
-			#binding-cells = <0>;
+			#binding-cells = <2>;
 			tapping-term-ms = <200>;
 			//quick_tap_ms = <0>;
 			//flavor = "tap-preferred";
