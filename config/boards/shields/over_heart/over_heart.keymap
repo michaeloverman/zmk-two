@@ -13,7 +13,7 @@
 #define FUN 3
 #define BT 4
 
-#define DTAP(key) &kp key &kp key // Macro to strike a key twice
+#define DTAP &dbl_sh // Macro to strike a key twice
 
 / {
 	behaviors {
@@ -108,12 +108,6 @@
 	};
 
 	macros {
-		//q_def: kp_q_default {
-			//label = "Q default";
-			//compatible = "zmk,behavior-macro";
-			//#binding-cells = <0>;
-			//bindings = <&kp Q>, <&macro_tap &to DEF>;
-		//};
 		go_to_sys: go_to_system_layer {
 			label = "go_to_system_layer";
 			compatible = "zmk,behavior-macro";
