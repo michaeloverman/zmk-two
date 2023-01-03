@@ -63,7 +63,12 @@
 		};
 		lr_brc: left_right_brace {
 			compatible = "zmk,behavior-tap-dance";
-			label = "LEFT_RIGHT_BRACE";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp LBRC>, <&kp RBRC>;
+		};
+		mtd: temp {
+			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
 			bindings = <&kp LBRC>, <&kp RBRC>;
