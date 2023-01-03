@@ -96,7 +96,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp LSHIFT>;
-		}
+		};
 		michael: michael {
 			label = "Michael";
 			compatible = "zmk,behavior-macro";
