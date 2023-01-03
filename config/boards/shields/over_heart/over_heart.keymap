@@ -22,7 +22,7 @@
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
 			tapping-term-ms = <200>;
-			quick_tap_ms = <15k>;
+			quick_tap_ms = <150>;
 			global-quick-tap;
 			retro-tap;
 			flavor = "tap-preferred";
