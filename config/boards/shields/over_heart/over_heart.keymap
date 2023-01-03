@@ -40,19 +40,19 @@
 			tapping-term-ms = <200>;
 			bindings = <&mo>, <&to>;
 		};
-		nav_sh: layer_shift_td {
-			compatible = "zmk,behavior-hold-tap";
-			label = "LAYER_SHIFT_TAP";
-			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			bindings = <&mo>, <&sh_td>;
-		};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_SHIFT_LOCK";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
 			bindings = <&sk LSHIFT>, <&kp LSHIFT &kp LSHIFT>, <&caps_word>;
+		};
+		nav_sh: layer_shift_td {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LAYER_SHIFT_TAP";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			bindings = <&mo>, <&sh_td>;
 		};
 	};
 
