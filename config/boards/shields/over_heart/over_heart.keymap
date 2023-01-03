@@ -63,7 +63,7 @@
 		};
 		lr_brc: left_right_brace {
 			compatible = "zmk,behavior-tap-dance";
-			label = "LEFT_RIGHT_BRACE";
+			label = "DOUBLE_QUOTE_SINGLE_QUOTE";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
 			bindings = <&kp LBRC>, <&kp RBRC>;
@@ -158,7 +158,7 @@
 
 		default_layer {
 			bindings = <
-				&dqt_sqt 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
+				&dqt_sqt	&com_q 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
 				&kp A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&kp S
 				&kp SEMI &kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp BSPC
 										&mo NUM &lt NAV N6	&mt LGUI RET	&lt FUN SPACE
