@@ -96,12 +96,19 @@
 			tapping-term-ms = <200>;
 			bindings = <&kp SEMI>, <&kp COLON>;
 		};
+		sh_hdbl: shift_hold_double_tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "SHIFT_HOLD_DOUBLE_TAP";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			bindings = <&kp LSHIFT>, <&dbl_sh>;
+		};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_SHIFT_LOCK";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&lsk NAV LSHIFT>, <&dbl_sh>, <&caps_word>;
+			bindings = <&lsk NAV LSHIFT>, <&sh_hdbl>, <&caps_word>;
 		};
 	};
 
