@@ -52,7 +52,7 @@
 			label = "PERIOD_EXCLAMATION_MARK";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&kp DOT>, <&kp EXCL>;
+			bindings = <&kp DOT>, <&kp EXCL>, <&dotdotdot>;
 		};
 		dqt_sqt: double_quote_single_quote {
 			compatible = "zmk,behavior-tap-dance";
@@ -68,12 +68,32 @@
 			tapping-term-ms = <200>;
 			bindings = <&kp LBRC>, <&kp RBRC>;
 		};
-		mtd: temp {
+		lr_par: left_right_parethesis {
 			compatible = "zmk,behavior-tap-dance";
-			label = "TEMP";
+			label = "LEFT_RIGHT_PARENTHESIS";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&kp LBRC>, <&kp RBRC>;
+			bindings = <&kp LPAR>, <&kp RPAR>;
+		};
+		lr_bkt: left_right_bracket {
+			compatible = "zmk,behavior-tap-dance";
+			label = "LEFT_RIGHT_BRACKET";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp LBKT>, <&kp RBKT>;
+		};
+		til_gr: tilde_grave {
+			compatible = "zmk,behavior-tap-dance";
+			label = "TILDE_GRAVE";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp TILDE>, <&kp GRAVE>;
+		};
+		sm_cl: semicolon_colon {
+			compatible = "zmk,behavior-tap-dance";
+			label = "SEMICOLON_COLON";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
 		};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
@@ -91,6 +111,12 @@
 			//#binding-cells = <0>;
 			//bindings = <&kp Q>, <&macro_tap &to DEF>;
 		//};
+		dotdotdot: three_dots {
+			label = "three_dots";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp DOT &kp DOT &kp DOT>;
+		};
 		dbl_sh: double_shift {
 			label = "double_shift";
 			compatible = "zmk,behavior-macro";
@@ -175,9 +201,9 @@
 
 		num_layer {
 			bindings = <
-				&mtd /*TILDE GRAVE*/ &kp Q		&kp PIPE	&kp HASH	&lr_brc	&kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
-				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&mtd /*LPAR RPAR*/ &kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
-				&kp ESC			&kp PRCNT	&kp DEL		&kp BSPC	&mtd /*LBKT RBKT*/ &kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
+				&til_gr	&kp Q		&kp PIPE	&kp HASH	&lr_brc	&kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
+				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&lr_par	&kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
+				&kp ESC			&kp PRCNT	&kp DEL		&kp BSPC	&lr_bkt	&kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
 														&to NAV 	&kp LSHIFT &to DEF	&kp N0
 				>;
 		};
