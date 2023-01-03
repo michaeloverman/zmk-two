@@ -40,6 +40,13 @@
 			tapping-term-ms = <200>;
 			bindings = <&mo>, <&to>;
 		};
+		lsk: layer_sticky {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LAYER_STICKY";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			bindings = <&mo>, <&sk>;
+		};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_SHIFT_LOCK";
@@ -47,13 +54,13 @@
 			tapping-term-ms = <200>;
 			bindings = <&sk LSHIFT>, <&kp LSHIFT &kp LSHIFT>, <&caps_word>;
 		};
-		nav_sh: layer_shift_td {
-			compatible = "zmk,behavior-hold-tap";
-			label = "LAYER_SHIFT_TAP";
-			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			bindings = <&mo>, <&sh_td>;
-		};
+		//nav_sh: layer_shift_td {
+			//compatible = "zmk,behavior-hold-tap";
+			//label = "LAYER_SHIFT_TAP";
+			//#binding-cells = <2>;
+			//tapping-term-ms = <200>;
+			//bindings = <&mo>, <&sh_td>;
+		//};
 	};
 
 	macros {
@@ -135,7 +142,7 @@
 				&trans	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
 				&trans	&trans	&trans	&trans	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
 				&trans	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
-										&to NUM	&nav_sh NAV	&to DEF	&lt FUN SPACE
+										&to NUM	&lsk NAV LSHIFT	&to DEF	&lt FUN SPACE
 			>;
 		};
 
