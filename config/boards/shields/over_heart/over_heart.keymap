@@ -24,15 +24,6 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
-		com_qu: comma_question {
-			compatible = "zmk,behavior-tap-dance";
-			label = "COMMA_QUESTION";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			//quick_tap_ms = <0>;
-			//flavor = "tap-preferred";
-			bindings = <&kp COMMA>, <&kp QMARK>;
-		};
 		mtd: my_tap_dance {
 			compatible = "zmk,behavior-tap-dance";
 			label = "MY_TAP_DANCE";
@@ -41,15 +32,6 @@
 			//quick_tap_ms = <0>;
 			//flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
-		};
-		dot_ex: dot_exclamation {
-			compatible = "zmk,behavior-tap-dance";
-			label = "DOT_EXCLAMATION";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			//quick_tap_ms = <0>;
-			//flavor = "tap-preferred";
-			bindings = <&kp DOT>, <&kp EXCL>;
 		};
 		lay_mt: layer_mod_tap {
 			compatible = "zmk,behavior-hold-tap";
@@ -141,7 +123,7 @@
 
 		default_layer {
 			bindings = <
-				&mtd DQT SQT &com_qu	&dot_ex	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
+				&mtd DQT SQT &mtd COMMA QMARK	&mtd DOT EXCL	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
 				&kp A	&hm LCTRL O	&hm LALT E	&kp U	&kp I		&kp D	&kp H	&hm RALT T	&hm RCTRL N	&kp S
 				&kp SEMI &kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp BSPC
 										&mo NUM &lt NAV N6	&mt LGUI RET	&lt FUN SPACE
