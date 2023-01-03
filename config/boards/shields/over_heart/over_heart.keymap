@@ -160,7 +160,7 @@
 				&dqt_sqt	&comma_q 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
 				&kp A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&kp S
 				&kp SEMI &kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp BSPC
-										&mo NUM &lay_sh NAV	&mt LGUI RET	&lt FUN SPACE
+										&mo NUM &sh_td	&mt LGUI RET	&lt FUN SPACE
 			>;
 		};
 		
