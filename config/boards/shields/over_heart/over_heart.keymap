@@ -19,19 +19,12 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
-			tapping-term-ms = <250>;
-			quick_tap_ms = <0>;
+			tapping-term-ms = <200>;
+			quick_tap_ms = <125>;
+			global-quick-tap;
+			retro-tap;
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
-		};
-		mtd: my_tap_dance {
-			compatible = "zmk,behavior-tap-dance";
-			label = "MY_TAP_DANCE";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			//quick_tap_ms = <0>;
-			//flavor = "tap-preferred";
-			bindings = <&kp N1>, <&kp N2>;
 		};
 		lay_mt: layer_mod_tap {
 			compatible = "zmk,behavior-hold-tap";
@@ -47,12 +40,40 @@
 			tapping-term-ms = <200>;
 			bindings = <&mo>, <&sk>;
 		};
+		comma_q: comma_question_mark {
+			compatible = "zmk,behavior-tap-dance";
+			label = "COMMA_QUESTION_MARK";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp COMMA>, <&kp QMARK>;
+		};
+		dot_x: period_exclamation_mark {
+			compatible = "zmk,behavior-tap-dance";
+			label = "PERIOD_EXCLAMATION_MARK";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp DOT>, <&kp EXCL>;
+		};
+		dqt_sqt: double_quote_single_quote {
+			compatible = "zmk,behavior-tap-dance";
+			label = "DOUBLE_QUOTE_SINGLE_QUOTE";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp DQT>, <&kp SQT>;
+		};
+		lr_brc: left_right_brace {
+			compatible = "zmk,behavior-tap-dance";
+			label = "LEFT_RIGHT_BRACE";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp LBRC>, <&kp RBRC>;
+		};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_SHIFT_LOCK";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&sk LSHIFT>, <&kp LSHIFT &kp LSHIFT>, <&caps_word>;
+			bindings = <&sk LSHIFT>, <&kp LSHIFT>, <&caps_word>;
 		};
 		//nav_sh: layer_shift_td {
 			//compatible = "zmk,behavior-hold-tap";
@@ -130,8 +151,8 @@
 
 		default_layer {
 			bindings = <
-				&mtd /*DQT SQT*/ &mtd /*COMMA QMARK*/	&mtd /*DOT EXCL*/	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
-				&kp A	&hm LCTRL O	&hm LALT E	&kp U	&kp I		&kp D	&kp H	&hm RALT T	&hm RCTRL N	&kp S
+				&dqt_sqt 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
+				&kp A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&kp S
 				&kp SEMI &kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp BSPC
 										&mo NUM &lt NAV N6	&mt LGUI RET	&lt FUN SPACE
 			>;
@@ -148,7 +169,7 @@
 
 		num_layer {
 			bindings = <
-				&mtd /*TILDE GRAVE*/ &kp Q		&kp PIPE	&kp HASH	&mtd /*LBRC RBRC*/ &kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
+				&mtd /*TILDE GRAVE*/ &kp Q		&kp PIPE	&kp HASH	&lr_brc	&kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
 				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&mtd /*LPAR RPAR*/ &kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
 				&kp ESC			&kp PRCNT	&kp DEL		&kp BSPC	&mtd /*LBKT RBKT*/ &kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
 														&to NAV 	&kp LSHIFT &to DEF	&kp N0
