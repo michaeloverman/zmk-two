@@ -118,7 +118,7 @@
 			#binding-cells = <0>;
 			bindings = <&kp S &kp Y &kp S>
 				, <&kp BSPC &kp BSPC &kp BSPC>
-				, <&to SYS>
+				, <&to BT>
 				;
 		};
 		dotdotdot: three_dots {
@@ -202,9 +202,9 @@
 		
 		nav_layer {
 			bindings = <
-				&reset	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&reset
+				&trans	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
 				&trans	&trans	&trans	&trans	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
-				&bootloader	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&bootloader
+				&trans	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
 										&to NUM	&lsk NAV LSHIFT	&to DEF	&go_to_sys
 			>;
 		};
