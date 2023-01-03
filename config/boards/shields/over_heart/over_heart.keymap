@@ -80,14 +80,7 @@
 			label = "TAP_DANCE_SHIFT_LOCK";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&sk LSHIFT>, <&kp LSHIFT>, <&caps_word>;
-		};
-		lay_sh: layer_shift_td {
-			compatible = "zmk,behavior-hold-tap";
-			label = "LAYER_SHIFT_TAP";
-			#binding-cells = <1>;
-			tapping-term-ms = <200>;
-			bindings = <&mo>, <&sh_td>;
+			bindings = <&lsk NAV LSHIFT>, <&dbl_sh>, <&caps_word>;
 		};
 	};
 
@@ -98,6 +91,12 @@
 			//#binding-cells = <0>;
 			//bindings = <&kp Q>, <&macro_tap &to DEF>;
 		//};
+		dbl_sh: double_shift {
+			label = "double_shift";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LSHIFT &kp LSHIFT>;
+		}
 		michael: michael {
 			label = "Michael";
 			compatible = "zmk,behavior-macro";
