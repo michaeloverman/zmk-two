@@ -32,14 +32,14 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "LAYER_MOD_TAP";
 			#binding-cells = <2>;
-			tapping-term-ms = <200>;
+			tapping-term-ms = <150>;
 			bindings = <&mo>, <&to>;
 		};
 		lsk: layer_sticky {
 			compatible = "zmk,behavior-hold-tap";
 			label = "LAYER_STICKY";
 			#binding-cells = <2>;
-			tapping-term-ms = <200>;
+			tapping-term-ms = <100>;
 			bindings = <&mo>, <&sk>;
 		};
 		comma_q: comma_question_mark {
