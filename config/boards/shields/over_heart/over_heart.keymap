@@ -102,8 +102,8 @@
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_SHIFT_LOCK";
 			#binding-cells = <0>;
-			tapping-term-ms = <230>;
-			bindings = <&lsk NAV LSHIFT>, <&hm LSHIFT DTAP>, <&caps_word>;
+			tapping-term-ms = <130>;
+			bindings = <&mo NAV>, <&caps_word>;
 		};
 		sys_dbl: system_layer_double {
 			compatible = "zmk,behavior-tap-dance";
@@ -246,9 +246,9 @@
 		default_layer {
 			bindings = <
 				&dqt_sqt	&comma_q 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
-				&kp A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&kp S
-				&sm_cl	&kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp BSPC
-										&mo NUM &sh_td	&mt LGUI RET	&lt FUN SPACE
+				&hm LSHIFT A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&hm RSHIFT S
+				&sm_cl	&kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp Z
+										&lt NUM ESC &sh_td	&mt LGUI RET	&lt FUN SPACE
 			>;
 		};
 		
