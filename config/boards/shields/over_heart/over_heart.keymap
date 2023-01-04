@@ -21,7 +21,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
-			tapping-term-ms = <200>;
+			tapping-term-ms = <150>;
 			quick_tap_ms = <150>;
 			global-quick-tap;
 			retro-tap;
@@ -39,7 +39,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "LAYER_STICKY";
 			#binding-cells = <2>;
-			tapping-term-ms = <100>;
+			tapping-term-ms = <200>;
 			bindings = <&mo>, <&sk>;
 		};
 		comma_q: comma_question_mark {
@@ -96,7 +96,7 @@
 			label = "SEMICOLON_COLON";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&kp SEMI>, <&kp COLON>;
+			bindings = <&mt LSHIFT SEMI>, <&kp COLON>;
 		};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
