@@ -113,6 +113,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings = <&kp S &kp Y &kp S>
+				, <&macro_wait_time 500>
 				, <&kp BSPC &kp BSPC &kp BSPC>
 				, <&to BT>
 				;
@@ -198,10 +199,10 @@
 		
 		nav_layer {
 			bindings = <
-				&trans	&trans	&trans	&trans	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
-				&trans	&trans	&trans	&trans	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
-				&trans	&trans	&trans	&trans	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
-										&to NUM	&lsk NAV LSHIFT	&to DEF	&go_to_sys
+				&trans	&trans	&kp LS(LC(TAB))	&kp LC(TAB)	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
+				&trans	&trans	&kp LS(LG(GRAVE))	&kp LG(GRAVE)	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
+				&trans	&trans	&kp LC(LEFT)	&kp LC(RIGHT)	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
+										&to NUM	&lsk NAV LSHIFT	&go_to_sys	&trans
 			>;
 		};
 
