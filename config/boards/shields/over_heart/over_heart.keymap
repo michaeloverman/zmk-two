@@ -182,6 +182,53 @@
 				, <&kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>
 				;
 		};
+		git_commit: git_commit {
+			label = "git_commit";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&kp G &kp I &kp T &kp SPACE>
+				, <&kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE>
+				, <&kp MINUS &kp M &kp SPACE &kp DQT &kp DQT>
+				, <&kp LEFT>
+				;
+		};
+		git_add: git_add {
+			label = "git_add";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&kp G &kp I &kp T &kp SPACE>
+				, <&kp A &kp D &kp D &kp SPACE &kp STAR>
+				;
+		};
+		git_status: git_status {
+			label = "git_status";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&kp G &kp I &kp T &kp SPACE>
+				, <&kp S &kp T &kp A &kp T &kp U &kp S>
+				;
+		};
+		git_push: git_push {
+			label = "git_push";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&kp G &kp I &kp T &kp SPACE>
+				, <&kp P &kp U &kp S &kp H>
+				;
+		};
+		git_pull: git_pull {
+			label = "git_pull";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&kp G &kp I &kp T &kp SPACE>
+				, <&kp P &kp U &kp L &kp L>
+				;
+		};
 	};
 
 
@@ -217,9 +264,9 @@
 
 		fun_layer {
 			bindings = <
-				&michael	&trans	&trans	&cvs_empnum	&trans		&trans	&kp F7	&kp F8	&kp F9	&kp LS(LA(C_VOL_UP))
-				&overman	&trans	&trans	&cvs_email	&trans		&trans	&kp F4	&kp F5	&kp F6	&kp LS(LA(C_VOL_DN))
-				&m_overman	&kp Q	&trans	&per_email	&trans		&trans	&kp F1	&kp F2	&kp F3	&kp Z
+				&michael	&trans	&git_push	&cvs_empnum	&trans		&trans	&kp F7	&kp F8	&kp F9	&kp LS(LA(C_VOL_UP))
+				&overman	&trans	&git_status	&cvs_email	&git_add		&trans	&kp F4	&kp F5	&kp F6	&kp LS(LA(C_VOL_DN))
+				&m_overman	&kp Q	&git_pull	&per_email	&git_commit		&trans	&kp F1	&kp F2	&kp F3	&kp Z
 										&trans	&kp LSHIFT		&to DEF	&trans
 			>;
 		};
