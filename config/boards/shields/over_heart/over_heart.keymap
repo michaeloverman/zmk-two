@@ -21,7 +21,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
-			tapping-term-ms = <150>;
+			tapping-term-ms = <250>;
 			quick_tap_ms = <150>;
 			global-quick-tap;
 			retro-tap;
@@ -247,7 +247,7 @@
 			bindings = <
 				&dqt_sqt	&comma_q 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
 				&hm LSHIFT A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&hm RSHIFT S
-				&sm_cl	&kp TAB	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp Z
+				&sm_cl	&kp Q	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp Z
 										&lt NUM ESC &sh_td	&mt LGUI RET	&lt FUN SPACE
 			>;
 		};
