@@ -265,7 +265,7 @@
 				&trans	&trans	&kp LS(LC(TAB))	&kp LC(TAB)	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
 				&trans	&trans	&kp LS(LG(GRAVE))	&kp LG(GRAVE)	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
 				&trans	&trans	&kp LC(LEFT)	&kp LC(RIGHT)	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
-										&to NUM	&lsk NAV LSHIFT	&sys_dbl	&trans
+										&to NUM	&lt NAV LSHIFT	&sys_dbl	&trans
 			>;
 		};
 
