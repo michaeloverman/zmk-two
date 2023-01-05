@@ -110,7 +110,7 @@
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_SHIFT_LOCK";
 			#binding-cells = <0>;
-			tapping-term-ms = <130>;
+			tapping-term-ms = <200>;
 			bindings = <&mo NAV>, <&caps_word>;
 		};
 		sys_dbl: system_layer_double {
