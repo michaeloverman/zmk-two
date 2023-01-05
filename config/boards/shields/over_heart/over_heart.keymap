@@ -16,6 +16,13 @@
 #define DTAP &dbl_sh // Macro to strike a key twice
 
 / {
+	combos {
+		combo_sys {
+            timeout-ms = <30>;
+			key-positions = <1 2>;
+            bindings = <&kp TAB>;
+        };
+	};
 	behaviors {
 		hm: homerow_mods {
 			compatible = "zmk,behavior-hold-tap";
@@ -28,13 +35,13 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
-		lay_mt: layer_mod_tap {
-			compatible = "zmk,behavior-hold-tap";
-			label = "LAYER_MOD_TAP";
-			#binding-cells = <2>;
-			tapping-term-ms = <150>;
-			bindings = <&mo>, <&to>;
-		};
+		//lay_mt: layer_mod_tap {
+			//compatible = "zmk,behavior-hold-tap";
+			//label = "LAYER_MOD_TAP";
+			//#binding-cells = <2>;
+			//tapping-term-ms = <150>;
+			//bindings = <&mo>, <&to>;
+		//};
 		lsk: layer_sticky {
 			compatible = "zmk,behavior-hold-tap";
 			label = "LAYER_STICKY";
