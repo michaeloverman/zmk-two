@@ -274,7 +274,7 @@
 				&til_gr	&kp LG(PIPE)	&kp PIPE	&kp HASH	&lr_brc	&kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
 				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&lr_par	&kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
 				&kp ESC			&kp PRCNT	&kp DEL		&kp BSPC	&lr_bkt	&kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
-														&to NAV 	&kp LSHIFT &to DEF	&kp N0
+														&trans	&kp LSHIFT &to DEF	&kp N0
 				>;
 		};
 
@@ -282,7 +282,7 @@
 			bindings = <
 				&michael	&trans	&git_push	&cvs_empnum	&trans		&trans	&kp F7	&kp F8	&kp F9	&kp LS(LA(C_VOL_UP))
 				&overman	&trans	&git_status	&cvs_email	&git_add		&trans	&kp F4	&kp F5	&kp F6	&kp LS(LA(C_VOL_DN))
-				&m_overman	&kp Q	&git_pull	&per_email	&git_commit		&trans	&kp F1	&kp F2	&kp F3	&kp Z
+				&m_overman	&trans	&git_pull	&per_email	&git_commit		&trans	&kp F1	&kp F2	&kp F3	&trans
 										&trans	&kp LSHIFT		&to DEF	&trans
 			>;
 		};
