@@ -32,7 +32,6 @@
 			tapping-term-ms = <250>;
 			quick_tap_ms = <150>;
 			global-quick-tap;
-			retro-tap;
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
@@ -183,6 +182,8 @@
 		cvs_email: cvs_email {
 			label = "michael.overman@cvshealth.com";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <30>;
+			tap-ms = <30>;
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap &kp M &kp I &kp C &kp H &kp A &kp E &kp L &kp DOT &kp O &kp V &kp E &kp R &kp M &kp A &kp N>
@@ -273,7 +274,7 @@
 			bindings = <
 				&til_gr	&kp LG(PIPE)	&kp PIPE	&kp HASH	&lr_brc	&kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
 				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&lr_par	&kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
-				&kp ESC			&kp PRCNT	&kp DEL		&kp BSPC	&lr_bkt	&kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
+				&kp COLON		&kp PRCNT	&kp DEL		&kp BSPC	&lr_bkt	&kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
 														&trans	&kp LSHIFT &to DEF	&kp N0
 				>;
 		};
