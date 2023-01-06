@@ -182,8 +182,8 @@
 		cvs_email: cvs_email {
 			label = "michael.overman@cvshealth.com";
 			compatible = "zmk,behavior-macro";
-			wait-ms = <30>;
-			tap-ms = <30>;
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap &kp M &kp I &kp C &kp H &kp A &kp E &kp L &kp DOT &kp O &kp V &kp E &kp R &kp M &kp A &kp N>
