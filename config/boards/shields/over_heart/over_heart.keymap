@@ -61,16 +61,16 @@
 			compatible = "zmk,behavior-tap-dance";
 			label = "PERIOD_EXCLAMATION_MARK";
 			#binding-cells = <0>;
-			tapping-term-ms = <200>;
+			tapping-term-ms = <240>;
 			bindings = <&kp DOT>, <&kp EXCL>, <&dotdotdot>;
 		};
-		dqt_sqt: double_quote_single_quote {
-			compatible = "zmk,behavior-tap-dance";
-			label = "DOUBLE_SINGLE_QUOTE";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp DQT>, <&kp SQT>;
-		};
+		//sqt_dqt: single_quote_double_quote {
+			//compatible = "zmk,behavior-tap-dance";
+			//label = "SINGLE_DOUBLE_QUOTE";
+			//#binding-cells = <0>;
+			//tapping-term-ms = <200>;
+			//bindings = <&kp SQT>, <&kp DQT>;
+		//};
 		lr_brc: left_right_brace {
 			compatible = "zmk,behavior-tap-dance";
 			label = "LEFT_RIGHT_BRACE";
@@ -104,7 +104,7 @@
 			label = "SEMICOLON_COLON";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&mt LSHIFT SEMI>, <&kp COLON>;
+			bindings = <&kp SEMI>, <&kp COLON>;
 		};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
@@ -253,7 +253,7 @@
 
 		default_layer {
 			bindings = <
-				&dqt_sqt	&comma_q 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
+				&kp SQT	&comma_q 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
 				&hm LSHIFT A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&hm RSHIFT S
 				&sm_cl	&kp Q	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp Z
 										&lt NUM ESC &sh_td	&mt LGUI RET	&lt FUN SPACE
