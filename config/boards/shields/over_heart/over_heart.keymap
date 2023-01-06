@@ -13,8 +13,6 @@
 #define FUN 3
 #define BT 4
 
-#define DTAP &dbl_sh // Macro to strike a key twice
-
 / {
 	combos {
 		compatible = "zmk,combos";
@@ -117,37 +115,39 @@
 			label = "SYSTEM_LAYER_DOUBLE";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&none>, <&go_to_sys>;
+			bindings = <&none>, <&to BT>;
 		};
 	};
 
 	macros {
-		go_to_sys: go_to_system_layer {
-			label = "go_to_system_layer";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp S &kp Y &kp S>
-				, <&macro_wait_time 500>
-				, <&macro_tap &kp BSPC>
-				, <&macro_wait_time 0 &kp BSPC &kp BSPC>
-				, <&to BT>
-				;
-		};
+		//go_to_sys: go_to_system_layer {
+			//label = "go_to_system_layer";
+			//compatible = "zmk,behavior-macro";
+			//#binding-cells = <0>;
+			//bindings = , <&macro_tap &kp BSPC>
+				//, <&macro_wait_time 0 &kp BSPC &kp BSPC>
+				//, <&to BT>
+				//;
+		//};
 		dotdotdot: three_dots {
 			label = "three_dots";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings = <&kp DOT &kp DOT &kp DOT>;
 		};
-		dbl_sh: double_shift {
-			label = "double_shift";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp LSHIFT &kp LSHIFT>;
-		};
+		//dbl_sh: double_shift {
+			//label = "double_shift";
+			//compatible = "zmk,behavior-macro";
+			//#binding-cells = <0>;
+			//bindings = <&kp LSHIFT &kp LSHIFT>;
+		//};
 		michael: michael {
 			label = "Michael";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap &kp LS(M) &kp I &kp C &kp H &kp A &kp E &kp L>
@@ -156,6 +156,8 @@
 		overman: overman {
 			label = "Overman";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap &kp LS(O) &kp V &kp E &kp R &kp M &kp A &kp N>
@@ -164,6 +166,8 @@
 		m_overman: m_overman {
 			label = "Michael Overman";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap &kp LS(M) &kp I &kp C &kp H &kp A &kp E &kp L>
@@ -174,6 +178,8 @@
 		cvs_empnum: cvs_employee_number {
 			label = "c178540";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap &kp C &kp N1 &kp N8 &kp N9 &kp N6 &kp N5 &kp N8>
@@ -193,6 +199,8 @@
 		per_email: personal_email {
 			label = "overman.michael@gmail.com";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap &kp O &kp V &kp E &kp R &kp M &kp A &kp N &kp DOT &kp M &kp I &kp C &kp H &kp A &kp E &kp L>
@@ -202,6 +210,8 @@
 		git_commit: git_commit {
 			label = "git_commit";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&kp G &kp I &kp T &kp SPACE>
@@ -213,6 +223,8 @@
 		git_add: git_add {
 			label = "git_add";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&kp G &kp I &kp T &kp SPACE>
@@ -222,6 +234,8 @@
 		git_status: git_status {
 			label = "git_status";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&kp G &kp I &kp T &kp SPACE>
@@ -231,6 +245,8 @@
 		git_push: git_push {
 			label = "git_push";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&kp G &kp I &kp T &kp SPACE>
@@ -240,6 +256,8 @@
 		git_pull: git_pull {
 			label = "git_pull";
 			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
 			#binding-cells = <0>;
 			bindings
 				= <&kp G &kp I &kp T &kp SPACE>
