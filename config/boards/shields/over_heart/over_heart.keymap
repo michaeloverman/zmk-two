@@ -103,13 +103,29 @@
 			tapping-term-ms = <200>;
 			bindings = <&none>, <&to BT>;
 		};
-		req_dbl: require_double_tap {
+		boot_dbl: bootloader_double_tap {
 			compatible = "zmk,behavior-tap-dance";
-			label = "REQUIRE_DOUBLE_TAP";
+			label = "BOOTLOADER_DOUBLE_TAP";
 			#binding-cells = <2>;
 			tapping-term-ms = <200>;
-			bindings = <&none>, <&bt>;
+			bindings = <&none>, <&bootloader>;
 		};
+		res_dbl: reset_double_tap {
+			compatible = "zmk,behavior-tap-dance";
+			label = "RESET_DOUBLE_TAP";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			bindings = <&none>, <&reset>;
+		};
+		hs: homerow_shifts {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFTS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
 	};
 
 	macros {
@@ -278,7 +294,7 @@
 		default_layer {
 			bindings = <
 				&kp SQT	&comma_q 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
-				&hm LSHIFT A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&hm RSHIFT S
+				&hs LSHIFT A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&hs RSHIFT S
 				&sm_cl	&kp Q	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&kp Z
 										&lt NUM ESC &sh_td	&mt LGUI RET	&lt FUN SPACE
 			>;
@@ -286,7 +302,7 @@
 		
 		nav_layer {
 			bindings = <
-				&trans	&trans	&kp LS(LC(TAB))	&kp LC(TAB)	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&trans
+				&trans	&trans	&kp LS(LC(TAB))	&kp LC(TAB)	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&kp BSLH
 				&trans	&trans	&kp LS(LG(GRAVE))	&kp LG(GRAVE)	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
 				&trans	&trans	&kp LC(LEFT)	&kp LC(RIGHT)	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
 										&to NUM	&lt NAV LSHIFT	&sys_dbl	&trans
@@ -295,7 +311,7 @@
 
 		num_layer {
 			bindings = <
-				&til_gr	&kp LG(PIPE)	&kp PIPE	&kp HASH	&lr_brc	&kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
+				&til_gr	&kp LG(FSLH)	&kp PIPE	&kp HASH	&lr_brc	&kp STAR	&kp N7		&kp N8		&kp N9		&kp FSLH 
 				&kp AMPS		&kp CARET	&kp DOLLAR	&kp AT		&lr_par	&kp PLUS	&kp N4		&kp N5		&kp N6		&kp MINUS
 				&kp COLON		&kp PRCNT	&kp DEL		&kp BSPC	&lr_bkt	&kp EQUAL	&kp N1		&kp N2		&kp N3		&kp UNDER
 														&trans	&kp LSHIFT &to DEF	&kp N0
@@ -313,9 +329,9 @@
 
 		sys_layer {
 			bindings = <
-				&req_dbl reset			&none			&bt BT_PRV		&bt BT_NXT		&bt BT_CLR		&none	&none	&none	&none	&reset
+				&res_dbl	&none			&bt BT_PRV		&bt BT_NXT		&bt BT_CLR		&none	&none	&none	&none	&reset
 				&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4		&none	&none	&none	&none	&none
-				&req_dbl bootloader		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
+				&boot_dbl	&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
 																&none			&none				&to DEF	&none
 			>;
 		};
