@@ -33,13 +33,15 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
-		//lsk: layer_sticky {
-			//compatible = "zmk,behavior-hold-tap";
-			//label = "LAYER_STICKY";
-			//#binding-cells = <2>;
-			//tapping-term-ms = <200>;
-			//bindings = <&mo>, <&sk>;
-		//};
+		hs: homerow_shifts {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFTS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
 		comma_q: comma_question_mark {
 			compatible = "zmk,behavior-tap-dance";
 			label = "COMMA_QUESTION_MARK";
@@ -117,15 +119,6 @@
 			tapping-term-ms = <200>;
 			bindings = <&none>, <&reset>;
 		};
-		hs: homerow_shifts {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SHIFTS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
 	};
 
 	macros {
@@ -302,8 +295,8 @@
 		
 		nav_layer {
 			bindings = <
-				&trans	&trans	&kp LS(LC(TAB))	&kp LC(TAB)	&trans		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&kp BSLH
-				&trans	&trans	&kp LS(LG(GRAVE))	&kp LG(GRAVE)	&trans		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
+				&trans	&trans	&kp LS(LC(TAB))	&kp LC(TAB)	&kp LS(LG(TAB))		&trans	&kp LG(UP)	&kp UP	&kp LG(DOWN)	&kp BSLH
+				&trans	&trans	&kp LS(LG(GRAVE))	&kp LG(GRAVE)	&kp LG(TAB)		&kp LG(LEFT)	&kp LEFT	&kp DOWN	&kp RIGHT	&kp LG(RIGHT)
 				&trans	&trans	&kp LC(LEFT)	&kp LC(RIGHT)	&trans		&trans	&kp LA(LEFT)	&none	&kp LA(RIGHT)	&trans
 										&to NUM	&lt NAV LSHIFT	&sys_dbl	&trans
 			>;
