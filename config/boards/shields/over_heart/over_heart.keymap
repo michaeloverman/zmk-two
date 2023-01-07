@@ -33,20 +33,13 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
-		//lay_mt: layer_mod_tap {
+		//lsk: layer_sticky {
 			//compatible = "zmk,behavior-hold-tap";
-			//label = "LAYER_MOD_TAP";
+			//label = "LAYER_STICKY";
 			//#binding-cells = <2>;
-			//tapping-term-ms = <150>;
-			//bindings = <&mo>, <&to>;
+			//tapping-term-ms = <200>;
+			//bindings = <&mo>, <&sk>;
 		//};
-		lsk: layer_sticky {
-			compatible = "zmk,behavior-hold-tap";
-			label = "LAYER_STICKY";
-			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			bindings = <&mo>, <&sk>;
-		};
 		comma_q: comma_question_mark {
 			compatible = "zmk,behavior-tap-dance";
 			label = "COMMA_QUESTION_MARK";
@@ -61,13 +54,6 @@
 			tapping-term-ms = <240>;
 			bindings = <&kp DOT>, <&kp EXCL>, <&dotdotdot>;
 		};
-		//sqt_dqt: single_quote_double_quote {
-			//compatible = "zmk,behavior-tap-dance";
-			//label = "SINGLE_DOUBLE_QUOTE";
-			//#binding-cells = <0>;
-			//tapping-term-ms = <200>;
-			//bindings = <&kp SQT>, <&kp DQT>;
-		//};
 		lr_brc: left_right_brace {
 			compatible = "zmk,behavior-tap-dance";
 			label = "LEFT_RIGHT_BRACE";
@@ -116,6 +102,13 @@
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
 			bindings = <&none>, <&to BT>;
+		};
+		req_dbl: require_double_tap {
+			compatible = "zmk,behavior-tap-dance";
+			label = "REQUIRE_DOUBLE_TAP";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			bindings = <&none>, <&bt>;
 		};
 	};
 
@@ -220,6 +213,18 @@
 				, <&kp LEFT>
 				;
 		};
+		git_branch: git_branch {
+			label = "git_branch";
+			compatible = "zmk,behavior-macro";
+			wait-ms = <10>;
+			tap-ms = <10>;
+			#binding-cells = <0>;
+			bindings
+				= <&kp F &kp E &kp A &kp T &kp U &kp R &kp E &kp BSLH>
+				, <&kp A &kp R &kp C &kp H &kp I &kp T &kp E &kp C &kp T &kp U &kp R &kp E &kp BSLH>
+				, <&kp O &kp V &kp E &kp R &kp M &kp A &kp N &kp BSLH>
+				;
+		};
 		git_add: git_add {
 			label = "git_add";
 			compatible = "zmk,behavior-macro";
@@ -308,9 +313,9 @@
 
 		sys_layer {
 			bindings = <
-				&reset			&none			&bt BT_PRV		&bt BT_NXT		&bt BT_CLR		&none	&none	&none	&none	&reset
+				&req_dbl reset			&none			&bt BT_PRV		&bt BT_NXT		&bt BT_CLR		&none	&none	&none	&none	&reset
 				&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4		&none	&none	&none	&none	&none
-				&bootloader		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
+				&req_dbl bootloader		&none			&none			&none			&none				&none	&none	&none	&none	&bootloader
 																&none			&none				&to DEF	&none
 			>;
 		};
