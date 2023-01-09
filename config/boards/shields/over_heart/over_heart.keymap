@@ -42,6 +42,15 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+		shs: shift_homerow_shifts {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_HOMEROW_SHIFTS";
+            #binding-cells = <2>;
+            tapping-term-ms = <0>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
 		comma_q: comma_question_mark {
 			compatible = "zmk,behavior-tap-dance";
 			label = "COMMA_QUESTION_MARK";
@@ -88,8 +97,8 @@
 			compatible = "zmk,behavior-tap-dance";
 			label = "SEMICOLON_COLON";
 			#binding-cells = <0>;
-			tapping-term-ms = <0>;
-			bindings = <&hs LSHIFT SEMI>, <&kp COLON>;
+			tapping-term-ms = <200>;
+			bindings = <&shs LSHIFT SEMI>, <&kp COLON>;
 		};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
