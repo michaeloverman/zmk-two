@@ -42,15 +42,6 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-		shs: shift_homerow_shifts {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_HOMEROW_SHIFTS";
-            #binding-cells = <2>;
-            tapping-term-ms = <0>;
-            quick_tap_ms = <100>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
 		comma_q: comma_question_mark {
 			compatible = "zmk,behavior-tap-dance";
 			label = "COMMA_QUESTION_MARK";
@@ -93,13 +84,13 @@
 			tapping-term-ms = <150>;
 			bindings = <&kp TILDE>, <&kp GRAVE>;
 		};
-		sm_cl: semicolon_colon {
-			compatible = "zmk,behavior-tap-dance";
-			label = "SEMICOLON_COLON";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&shs LSHIFT SEMI>, <&kp COLON>;
-		};
+		//sm_cl: semicolon_colon {
+			//compatible = "zmk,behavior-tap-dance";
+			//label = "SEMICOLON_COLON";
+			//#binding-cells = <0>;
+			//tapping-term-ms = <200>;
+			//bindings = <&hs LSHIFT SEMI>, <&kp COLON>;
+		//};
 		sh_td: tap_dance_shift_lock {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_SHIFT_LOCK";
@@ -282,7 +273,7 @@
 			bindings = <
 				&kp SQT	&comma_q 	&dot_x	&kp P	&kp Y	&kp F	&kp G	&kp C		&kp R		&kp L
 				&kp A	&hm LCTRL O	&hm LALT E	&hm LGUI U	&kp I		&kp D	&hm RGUI H	&hm RALT T	&hm RCTRL N	&kp S
-				&sm_cl	&kp Q	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&hs RSHIFT Z
+				&hs LSHIFT SEMI	&kp Q	&kp J		&kp K		&kp X		&kp B	&kp M		&kp W		&kp V		&hs RSHIFT Z
 										&lt NUM ESC &sh_td	&mt LGUI RET	&lt FUN SPACE
 			>;
 		};
