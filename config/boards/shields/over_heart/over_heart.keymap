@@ -122,15 +122,6 @@
 	};
 
 	macros {
-		//go_to_sys: go_to_system_layer {
-			//label = "go_to_system_layer";
-			//compatible = "zmk,behavior-macro";
-			//#binding-cells = <0>;
-			//bindings = , <&macro_tap &kp BSPC>
-				//, <&macro_wait_time 0 &kp BSPC &kp BSPC>
-				//, <&to BT>
-				//;
-		//};
 		dotdotdot: three_dots {
 			label = "three_dots";
 			compatible = "zmk,behavior-macro";
@@ -139,12 +130,6 @@
 			#binding-cells = <0>;
 			bindings = <&kp DOT &kp DOT &kp DOT>;
 		};
-		//dbl_sh: double_shift {
-			//label = "double_shift";
-			//compatible = "zmk,behavior-macro";
-			//#binding-cells = <0>;
-			//bindings = <&kp LSHIFT &kp LSHIFT>;
-		//};
 		michael: michael {
 			label = "Michael";
 			compatible = "zmk,behavior-macro";
