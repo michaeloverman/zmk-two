@@ -88,7 +88,7 @@
 			compatible = "zmk,behavior-tap-dance";
 			label = "SEMICOLON_COLON";
 			#binding-cells = <0>;
-			tapping-term-ms = <200>;
+			tapping-term-ms = <0>;
 			bindings = <&hs LSHIFT SEMI>, <&kp COLON>;
 		};
 		sh_td: tap_dance_shift_lock {
